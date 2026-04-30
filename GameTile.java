@@ -1,7 +1,6 @@
-import javax.swing.JButton;
-
-public class GameTile extends JButton
+public class GameTile
 {
+    int x, y;
     public GameTile(int xpos, int ypos)
     {
         int x = xpos;

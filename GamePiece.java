@@ -1,19 +1,25 @@
 public class GamePiece 
 {
-    private (int, int) pos;
+    protected int posx, posy;
 
-    public GamePiece((int, int) argpos)
+    public GamePiece()
     {
-        pos = argpos;
+        
     }
     
-    public void SetPos((int, int) argpos)
+    public void SetPos(int argposx, int argposy)
     {
-        pos = argpos;
+        posx = argposx;
+        posy = argposy;
     }
 
-    public (int, int) GetPos()
+    public int GetPosx()
     {
-        return pos;
+        return posx;
+    }
+
+    public int getPosy()
+    {
+        return posy;
     }
 }
