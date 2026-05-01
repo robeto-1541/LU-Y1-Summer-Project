@@ -1,4 +1,7 @@
-public class Rear extends GamePiece
+public class Rear extends Snowball
 {
-    
+    public Rear()
+    {
+
+    }
 }

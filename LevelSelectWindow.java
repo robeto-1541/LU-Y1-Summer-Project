@@ -22,9 +22,9 @@ public class LevelSelectWindow
         MainUI.setVisible(true);
     }
 
-    public static void main(String[] arguments)
+    /*public static void main(String[] arguments)
     {
         LevelSelectWindow LevelWindow = new LevelSelectWindow();
-    }
+    }*/
 }
 

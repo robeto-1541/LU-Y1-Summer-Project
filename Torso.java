@@ -1,4 +1,4 @@
-public class Torso extends GamePiece
+public class Torso extends Snowball
 {
     
 }
