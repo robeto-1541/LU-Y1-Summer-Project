@@ -6,14 +6,16 @@ public class Head extends GamePiece
         posx = argposx;
         posy = argposy;
         colour = argcolour;
+        type = String.format(colour + "Head");
     }
 
-    public bool isNextToBall()
+    public boolean isNextToBall()
     {
         for (int i = 0; i < 4; i++)
         {
-
+            
         }
+        return false;
     }
 
     public void headStack()

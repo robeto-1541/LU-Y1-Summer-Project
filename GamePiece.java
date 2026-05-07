@@ -1,12 +1,8 @@
-public class GamePiece 
+public abstract class GamePiece 
 {
-    protected int posx, posy;
+    public int posx, posy;
+    public String type;
 
-    public GamePiece()
-    {
-        
-    }
-    
     public void SetPos(int argposx, int argposy)
     {
         posx = argposx;
