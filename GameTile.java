@@ -1,11 +1,7 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class GameTile extends JButton
-{
+public class GameTile extends JButton {
     // Tidy this dump...
     ImageIcon emptyIcon = new ImageIcon("Resources/hole.png");
     ImageIcon rearIcon = new ImageIcon("Resources/snowball_large.png");
@@ -21,42 +17,14 @@ public class GameTile extends JButton
 
     int posx, posy;
     public GamePiece pieceHere;
-    public boolean selected = false;
 
-    public GameTile(int argposx, int argposy)
-    {
+    public GameTile(int argposx, int argposy) {
         posx = argposx;
         posy = argposy;
         this.setIcon(emptyIcon);
-        
-        this.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                // If this tile contains a tree, take no action
-                // When no tile selected, select this tile
-                // When this tile already selected, deselect
-                // When other tile selected, check this tile is orthogonally adjacent to previous
-                // If so, move piece in associated direction - see pieces for movement rules
-                if (pieceHere instanceof GameTree || pieceHere instanceof SnowballStack)
-                {
-                    return;
-                }
-                if (selected)
-                {
-                    selected = false;
-                    return;
-                }
-                else
-                {
-                    selected = true;
-                }
-            }
-        });
     }
 
-    public void setPiece(GamePiece piece)
-    {
+    public void setPiece(GamePiece piece) {
         pieceHere = piece;
         switch (pieceHere.type) {
             case "Tree":
@@ -66,11 +34,11 @@ public class GameTile extends JButton
             case "Stack":
                 this.setIcon(stackIcon);
                 break;
-            
+
             case "rHead":
                 this.setIcon(redHeadIcon);
                 break;
-            
+
             case "bHead":
                 this.setIcon(blueHeadIcon);
                 break;
@@ -78,7 +46,7 @@ public class GameTile extends JButton
             case "yHead":
                 this.setIcon(yellowHeadIcon);
                 break;
-            
+
             case "Rear":
                 this.setIcon(rearIcon);
                 break;
@@ -87,9 +55,14 @@ public class GameTile extends JButton
                 this.setIcon(torsoIcon);
                 break;
 
-             default:
+            default:
                 this.setIcon(emptyIcon);
                 break;
         }
+    }
+
+    public void movePiece(GameTile target) {
+        target.pieceHere = this.pieceHere;
+        this.pieceHere = null;
     }
 }

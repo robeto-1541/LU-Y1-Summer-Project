@@ -1,21 +1,17 @@
-public abstract class GamePiece 
-{
+public abstract class GamePiece {
     public int posx, posy;
     public String type;
 
-    public void SetPos(int argposx, int argposy)
-    {
+    public void SetPos(int argposx, int argposy) {
         posx = argposx;
         posy = argposy;
     }
 
-    public int GetPosx()
-    {
+    public int GetPosx() {
         return posx;
     }
 
-    public int getPosy()
-    {
+    public int getPosy() {
         return posy;
     }
 }

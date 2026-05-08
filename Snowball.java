@@ -1,12 +1,9 @@
-public abstract class Snowball extends GamePiece
-{
-    public Snowball()
-    {
+public abstract class Snowball extends GamePiece {
+    public Snowball() {
 
     }
 
-    public void Move()
-    {
-        
+    public void Move() {
+
     }
 }

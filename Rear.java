@@ -1,7 +1,5 @@
-public class Rear extends Snowball
-{
-    public Rear()
-    {
+public class Rear extends Snowball {
+    public Rear() {
         type = "Rear";
     }
 }
