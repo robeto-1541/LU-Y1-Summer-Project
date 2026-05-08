@@ -1,9 +1,5 @@
 public class GameTree extends GamePiece {
-    int posx, posy;
-
-    public GameTree(int argposx, int argposy) {
-        posx = argposx;
-        posy = argposy;
+    public GameTree() {
         type = "Tree";
     }
 }

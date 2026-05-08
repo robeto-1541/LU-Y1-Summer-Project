@@ -21,9 +21,9 @@ public class GameWindow {
 
         // hardcoded level implementation...
         gameBoard.GetTile(0, 1).setPiece(new Rear());
-        gameBoard.GetTile(3, 0).setPiece(new Head(0, 0, 'b'));
+        gameBoard.GetTile(3, 0).setPiece(new Head('b'));
         gameBoard.GetTile(3, 4).setPiece(new Torso());
-        gameBoard.GetTile(0, 4).setPiece(new GameTree(0, 4));
+        gameBoard.GetTile(0, 4).setPiece(new GameTree());
 
         MainUI.setSize(800, 640);
         MainUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

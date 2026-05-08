@@ -26,6 +26,10 @@ public class GameTile extends JButton {
 
     public void setPiece(GamePiece piece) {
         pieceHere = piece;
+        if (pieceHere == null) {
+            this.setIcon(emptyIcon);
+            return;
+        }
         switch (pieceHere.type) {
             case "Tree":
                 this.setIcon(treeIcon);
@@ -47,6 +51,18 @@ public class GameTile extends JButton {
                 this.setIcon(yellowHeadIcon);
                 break;
 
+            case "rSnowman":
+                this.setIcon(redManIcon);
+                break;
+
+            case "bSnowman":
+                this.setIcon(blueManIcon);
+                break;
+
+            case "ySnowman":
+                this.setIcon(yellowManIcon);
+                break;
+
             case "Rear":
                 this.setIcon(rearIcon);
                 break;
@@ -62,7 +78,8 @@ public class GameTile extends JButton {
     }
 
     public void movePiece(GameTile target) {
-        target.pieceHere = this.pieceHere;
-        this.pieceHere = null;
+
+        target.setPiece(pieceHere);
+        this.setPiece(null);
     }
 }
